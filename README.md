@@ -7,14 +7,14 @@
 ### Installation
 **npm:**
 ```
-npm install --save arraySampling
+npm install --save array-sampling
 ```
 
 ### Usage
 **API:**
 ```
 // ES6
-import sampling from 'arraySampling'
+import sampling from 'array-sampling'
 // or
-import { systematicSample } from 'arraySampling'
+import { systematicSample } from 'array-sampling'
 ```
