@@ -12,8 +12,8 @@ gulp.task('clean', () => del(['./dist']))
 
 const rollupConfig = minimize => ({
   rollup: Rollup,
-  entry: './src/pell.js',
-  moduleName: 'pell',
+  entry: './src/sampling.js',
+  moduleName: 'sampling',
   format: 'umd',
   exports: 'named',
   plugins: [babel({ exclude: 'node_modules/**' })].concat(
@@ -37,7 +37,7 @@ gulp.task('script', () => {
 
   gulp.src('./src/*.js')
     .pipe(rollup(rollupConfig(true)))
-    .pipe(rename('pell.min.js'))
+    .pipe(rename('sampling.min.js'))
     .pipe(size({ showFiles: true }))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(gulp.dest('./dist'))
@@ -45,5 +45,5 @@ gulp.task('script', () => {
 
 gulp.task('default', ['clean'], () => {
   run('script')
-  gulp.watch('./src/pell.js', ['script'])
+  gulp.watch('./src/sampling.js', ['script'])
 })

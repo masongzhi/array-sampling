@@ -1,9 +1,7 @@
-/**
- * Created by masongzhi on 17-7-26.
- */
+/* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 export const systematicSample = (array, k) => {
-  if (!Array.isArray(array)) return console.info(`${array} is not a array`)
-  if (!k || !Number.isInteger(k)) return console.info(`${k} is undefined or not a integer`)
+  if (!Array.isArray(array)) return console.warn(`${array} is not a array`)
+  if (!k || !Number.isInteger(k)) return console.warn(`${k} is undefined or not a integer`)
   let count = 0
   const result = array.filter((it, index) => {
     if (index >= count) {

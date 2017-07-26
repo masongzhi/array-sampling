@@ -2,8 +2,10 @@
   "name": "array-sampling",
   "version": "0.1.0",
   "description": "some sampling function for array",
-  "main": "index.js",
+  "main": "./dist/sampling.min.js",
   "scripts": {
+    "precommit": "npm run lint",
+    "prepush": "npm run lint",
     "dev": "gulp",
     "build": "gulp clean && gulp script",
     "lint": "./node_modules/.bin/eslint .js ./"
