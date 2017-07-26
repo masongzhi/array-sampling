@@ -8,7 +8,8 @@
     "prepush": "npm run lint",
     "dev": "gulp",
     "build": "gulp clean && gulp script",
-    "lint": "./node_modules/.bin/eslint .js ./"
+    "lint": "./node_modules/.bin/eslint .js ./",
+    "prepublish": "npm run lint"
   },
   "repository": {
     "type": "git",
